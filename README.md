@@ -90,9 +90,24 @@ Expected Output:
 
 Describe: pizzaTopping
 Test: "It should have a value that can be returned"
-Code: pizzaToppings
+Code: pizzaToppings.meat
 Expected Output:
-meat: ''
+["pepperoni", "sausage", "chicken"]
+
+Test: "It should have an array of different sauces that can be returned"
+Code: pizzaToppings.sauce
+Expected Output:
+["marinera", "alfredo", "buffalo"]
+
+Test: "It should have an array of different vegies that can be returned"
+Code: pizzaToppings.vegies
+Expected Output:
+["mushroom", "jalapeno", "olive"]
+
+Test: "It should have an array of different cheeses that can be returned"
+Code: pizzaToppings.cheese
+Expected Output:
+["mozzarella", "parmesan", "blue-cheese"]
 
 Test: "It should have a multiple values from multiple arrays that can be returned"
 Code: pizzaToppings.
