@@ -35,7 +35,8 @@ The prompt’s required functionality and baseline project requirements are in p
 
 ## Known Bugs
 
-* No known bugs.
+* Not fully fleshed out
+* No current UI or HTMl
 
 ## License
 
@@ -121,23 +122,23 @@ Expected Ouput: 'pepperoni'
 Describe: Pizza.prototype.calculateCost
 Test: "It should calculate the cost of a small pizza with no toppings"
 Code: let myPizza = new Pizza("Matt", [], "small");
-      myPizza.calculateCost();
+      myPizza.calcCost();
       myPizza.cost;
 Expected Output: 12
 
 Test: "It should calculate the cost of a large pizza with no toppings"
 Code: let myPizza = new Pizza("Matt", [], "large");
-      myPizza.calculateCost();
+      myPizza.calcCost();
       myPizza.cost;
 Expected Output: 18
 
 Test: "It should calculate the cost of a small pizza with on topping"
-Code: myPizza.calculateCost();
+Code: myPizza.calcCost();
       myPizza.cost;
 Expected Ouput: 16
 
 Test: "it should calculate the cost of a large pizza two toppings"
-Code: myPizza.calcualteCost();
+Code: myPizza.calcCost();
   myPizza.cost;
 Expected Ouput: 17 
 
