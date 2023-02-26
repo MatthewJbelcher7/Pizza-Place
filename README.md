@@ -81,3 +81,24 @@ Expected Output: "pepperoni"
 Test: "It should return a property 'size'."
 Code: myPizza.size
 Expected Output: "large"
+
+Describe: pizzaSize
+Test: "It should allow the selection of a size from an array"
+Code: pizzaSize.size[2]
+Expected Output:
+"large"
+
+Describe: pizzaTopping
+Test: "It should have a value that can be returned"
+Code: pizzaToppings
+Expected Output:
+meat: ''
+
+Test: "It should have a multiple values from multiple arrays that can be returned"
+Code: pizzaToppings.
+Expected Output:
+{sauce: Array(3), meat: Array(3), vegies: Array(3), cheese: Array(3)}
+
+Test: "It should have an array of which we can select"
+Code: pizzaToppings.meat[0]
+Expected Ouput: 'pepperoni'
