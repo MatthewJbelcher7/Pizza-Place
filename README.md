@@ -2,8 +2,6 @@
 
 #### By Matthew Belcher
 
-#### A Game App
-
 ## Technologies Used
 
 * HTML 
@@ -24,6 +22,7 @@ The prompt’s required functionality and baseline project requirements are in p
 
 
 ### Goals
+* This should show the capability to make and use objects
 
 
 
@@ -32,6 +31,7 @@ The prompt’s required functionality and baseline project requirements are in p
 * Clone this repo to your workspace.
 * Navigate to the top level of the directory.
 * Open index.html in your browser.
+* Select a variety of choices of toppings and size and get a returned value
 
 ## Known Bugs
 
@@ -130,3 +130,37 @@ Code: let myPizza = new Pizza("Matt", [], "large");
       myPizza.calculateCost();
       myPizza.cost;
 Expected Output: 18
+
+Test: "It should calculate the cost of a small pizza with on topping"
+Code: myPizza.calculateCost();
+      myPizza.cost;
+Expected Ouput: 16
+
+Test: "it should calculate the cost of a large pizza two toppings"
+Code: myPizza.calcualteCost();
+  myPizza.cost;
+Expected Ouput: 17 
+
+Test:
+Code:
+Expected Ouput:
+
+Test:
+Code:
+Expected Ouput:
+
+Test:
+Code:
+Expected Ouput:
+
+Test:
+Code:
+Expected Ouput:
+
+Test:
+Code:
+Expected Ouput:
+
+Test:
+Code:
+Expected Ouput:
