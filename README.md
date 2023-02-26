@@ -117,3 +117,16 @@ Expected Output:
 Test: "It should have an array of which we can select"
 Code: pizzaToppings.meat[0]
 Expected Ouput: 'pepperoni'
+
+Describe: Pizza.prototype.calculateCost
+Test: "It should calculate the cost of a small pizza with no toppings"
+Code: let myPizza = new Pizza("Matt", [], "small");
+      myPizza.calculateCost();
+      myPizza.cost;
+Expected Output: 12
+
+Test: "It should calculate the cost of a large pizza with no toppings"
+Code: let myPizza = new Pizza("Matt", [], "large");
+      myPizza.calculateCost();
+      myPizza.cost;
+Expected Output: 18
