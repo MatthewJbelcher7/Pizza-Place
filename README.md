@@ -1,6 +1,6 @@
 # Nite Train Pizza
 
-#### By Matthew Belcher
+#### By _**{Matthew J Belcher}**_
 
 ## Technologies Used
 
@@ -9,7 +9,7 @@
 * Javascript
 
 ## Description
-This program will allow a user to order a pizza by imputting who the order is for, selecting a size, selecting toppings, and create a price variable that changes based on the toppings and has a scaling adjustment following the size.
+_{This program will allow a user to order a pizza by imputting who the order is for, selecting a size, selecting toppings, and create a price variable that changes based on the toppings and has a scaling adjustment following the size.}_
 
 
 ### Objectives 
@@ -40,9 +40,9 @@ The prompt’s required functionality and baseline project requirements are in p
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+_[MIT License](https://opensource.org/licenses/MIT)_
 
-Copyright (c) 2/26/2023 Matthew Belcher
+Copyright (c) _<2/26/2023>_ Matthew Belcher
 
 MIT License
 
@@ -63,6 +63,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Tests
 
 Describe: function myPizza()
 Test: "It should return a pizza object"
