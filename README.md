@@ -67,3 +67,17 @@ Describe: function myPizza()
 Test: "It should return a pizza object"
 Code: MyPizza
 Expected Output: function myPizza() {}
+
+Test: "It should return a property 'guest'."
+Code: myPizza.guest
+Expected Output: "matt"
+
+
+Test: "It should return a property 'toppings'."
+Code: myPizza.toppings
+Expected Output: "pepperoni"
+
+
+Test: "It should return a property 'size'."
+Code: myPizza.size
+Expected Output: "large"
