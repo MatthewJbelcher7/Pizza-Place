@@ -24,10 +24,10 @@ function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
       this.toppings.sauce.forEach(function(sauce) {
         cost += sauce.price;
       });
-      this.toppings.vegies.forEach(function(meat) {
+      this.toppings.meat.forEach(function(meat) {
         cost += meat.price;
       });
-      this.toppings.vegis.forEach(function(veg) {
+      this.toppings.veggis.forEach(function(veg) {
         cost += veg.price;
       });
       this.toppings.cheese.forEach(function(cheese) {
@@ -76,3 +76,14 @@ let pizzaToppings = {
     { name:  "blue-cheese", price:1},
   ],
 };
+
+// User Logic
+const pizzaForm = document.getElementById("pizza-form");
+pizzaForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const size = document.querySelector('input[name="size"];checked').value;
+  const sauce = document.querySelector('input[name="sauce"];checked');
+  const meat = document.querySelector('input[name="meat"];checked');
+  const vegies = document.querySelector('input[name="vegi"];checked');
+  const cheese = document.querySelector('input[name="cheese"];checked');
+});  
