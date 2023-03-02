@@ -24,7 +24,7 @@ function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
       this.toppings.sauce.forEach(function(sauce) {
         cost += sauce.price;
       });
-      thisToppings.vegies.forEach(function(meat) {
+      this.toppings.vegies.forEach(function(meat) {
         cost += meat.price;
       });
       this.toppings.vegis.forEach(function(veg) {
@@ -47,11 +47,10 @@ function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
           default:
             break;
         }
-      }
-  }
 
   return cost;
-
+  };
+}
 
 let pizzaSize = {size: ["small", "medium", "large"]}
 
@@ -76,4 +75,4 @@ let pizzaToppings = {
     { name: "parmesan",  price:0},
     { name:  "blue-cheese", price:1},
   ],
-}
+};
