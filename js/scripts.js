@@ -4,6 +4,7 @@ function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
   this.guest = pizzaGuest;
   this.toppings = pizzaToppings;
   this.size = pizzaSize;
+}
 
   this.calcCost = function() {
   let cost = 0
@@ -49,8 +50,8 @@ function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
         }
 
   return cost;
-  };
-}
+};
+
 
 let pizzaSize = {size: ["small", "medium", "large"]}
 
@@ -81,12 +82,22 @@ let pizzaToppings = {
 const pizzaForm = document.getElementById("pizza-form");
 pizzaForm.addEventListener("submit", function(event) {
   event.preventDefault();
-  const name = document.getElementById("name-input").value;
+  const name = document.getElementById("guest-name").value;
   const size = document.querySelector('input[name="size"];checked').value;
   const sauce = document.querySelector('input[name="sauce"];checked');
   const meat = document.querySelector('input[name="meat"];checked');
-  const vegies = document.querySelector('input[name="vegi"];checked');
+  const veggies = document.querySelector('input[name="vegi"];checked');
   const cheese = document.querySelector('input[name="cheese"];checked');
+
+  const toppings = {
+    sauce: pizzaToppings.sauce.filter(s => sauce.includes(s.name)),
+    meat: pizzaToppings.meat.filter(m => meat.includes(m.name)),
+    veggies: pizzaToppings.veggies.filter(v => veggies.includes(v.name)),
+    cheese: pizzaToppings.cheese.filter(c => cheese.includes(c.name)),
+  };
+
+  const pizza = new Pizza(name, toppings, size);
+  const totalCost = pizza.calcCost();
 
   console.log('Order for ${name}!');
 });  

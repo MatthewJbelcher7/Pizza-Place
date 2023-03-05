@@ -143,27 +143,3 @@ Test: "it should calculate the cost of a large pizza two toppings"
 Code: myPizza.calcCost();
   myPizza.cost;
 Expected Ouput: 17 
-
-Test:
-Code:
-Expected Ouput:
-
-Test:
-Code:
-Expected Ouput:
-
-Test:
-Code:
-Expected Ouput:
-
-Test:
-Code:
-Expected Ouput:
-
-Test:
-Code:
-Expected Ouput:
-
-Test:
-Code:
-Expected Ouput:
