@@ -35,7 +35,7 @@ The prompt’s required functionality and baseline project requirements are in p
 
 ## Known Bugs
 
-* Not fully fleshed out
+* I could add functionality for having the reset also clear the order in addition to clearing all selection and type.
 
 ## License
 

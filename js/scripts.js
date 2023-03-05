@@ -14,18 +14,48 @@ function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
 Pizza.prototype.calcCost = function() {
   let cost = pizzaPrices[this.size] || 0;
 
-      this.toppings.sauce.forEach(function(sauce) {
-        cost += sauce.price;
-      });
-      this.toppings.meat.forEach(function(meat) {
-        cost += meat.price;
-      });
-      this.toppings.veggie.forEach(function(veg) {
-        cost += veg.price;
-      });
-      this.toppings.cheese.forEach(function(cheese) {
-        cost += cheese.price;
-      });
+  const selectedToppings = {
+    sauce:  [],
+    meat:  [],
+    veggie:  [],
+    cheese:  []
+  };
+  document.querySelectorAll('input[name="sauce"]:checked').forEach(function(checkbox) {
+    const sauce = pizzaToppings.sauce.find(function(s) {
+      return s.name === checkbox.value;
+    });
+    selectedToppings.sauce.push(sauce);
+  });
+  document.querySelectorAll('input[name="meat"]:checked').forEach(function(checkbox) {
+    const meat = pizzaToppings.meat.find(function(m) {
+      return m.name === checkbox.value;
+    });
+    selectedToppings.meat.push(meat);
+  });
+  document.querySelectorAll('input[name="veggie"]:checked').forEach(function(checkbox) {
+    const veggie = pizzaToppings.veggie.find(function(v) {
+      return v.name === checkbox.value;
+    });
+    selectedToppings.veggie.push(veggie);
+  });
+  document.querySelectorAll('input[name="cheese"]:checked').forEach(function(checkbox) {
+    const cheese = pizzaToppings.cheese.find(function(c) {
+      return c.name === checkbox.value;
+    });
+    selectedToppings.cheese.push(cheese);
+  });
+  selectedToppings.sauce.forEach(function(sauce) {
+    cost += sauce.price;
+  });
+  selectedToppings.meat.forEach(function(meat) {
+    cost += meat.price;
+  });
+  selectedToppings.veggie.forEach(function(veggie) {
+    cost += veggie.price;
+  });
+  selectedToppings.cheese.forEach(function(cheese) {
+    cost += cheese.price;
+  });
 
       switch (this.size) {
           case "small":
@@ -52,7 +82,7 @@ let pizzaToppings = {
     { name: "buffalo", price:1},
 ], 
   meat: [
-    { name: "pepperoni", price:0},
+    { name: "pepperoni", price:1},
     { name: "sausage", price:1},
     { name: "chicken", price:1.5},
 ],
@@ -84,7 +114,7 @@ pizzaForm.addEventListener("submit", function(event) {
   document.querySelectorAll('input[name="meat"]:checked').forEach(function(checkbox) {
     meats.push(checkbox.value);
   });
-  document.querySelectorAll('input[name="veggies"]:checked').forEach(function(checkbox) {
+  document.querySelectorAll('input[name="veggie"]:checked').forEach(function(checkbox) {
     veggies.push(checkbox.value);
   });
   document.querySelectorAll('input[name="cheese"]:checked').forEach(function(checkbox) {
