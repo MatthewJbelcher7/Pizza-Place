@@ -65,7 +65,7 @@ let pizzaToppings = {
     { name: "sausage", price:1},
     { name: "chicken", price:1.5},
 ],
-  vegies: [
+  veggies: [
     { name: "mushroom", price:0},
     { name: "jalapeno", price:0},
     { name:  "olive", price:0},
@@ -81,9 +81,12 @@ let pizzaToppings = {
 const pizzaForm = document.getElementById("pizza-form");
 pizzaForm.addEventListener("submit", function(event) {
   event.preventDefault();
+  const name = document.getElementById("name-input").value;
   const size = document.querySelector('input[name="size"];checked').value;
   const sauce = document.querySelector('input[name="sauce"];checked');
   const meat = document.querySelector('input[name="meat"];checked');
   const vegies = document.querySelector('input[name="vegi"];checked');
   const cheese = document.querySelector('input[name="cheese"];checked');
+
+  console.log('Order for ${name}!');
 });  
