@@ -1,4 +1,9 @@
  // Business Logic
+const pizzaPrices = {
+  small: 12,
+  medium: 16,
+  large: 18,
+};
 
 function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
   this.guest = pizzaGuest;
@@ -7,21 +12,8 @@ function Pizza(pizzaGuest, pizzaToppings, pizzaSize) {
 }  
 
 Pizza.prototype.calcCost = function() {
-  let cost = 0
+  let cost = pizzaPrices[this.size] || 0;
 
-  switch (this.size) {
-    case "small":
-      cost += 12;
-      break;
-    case "medium":
-      cost += 16;
-      break;
-    case "large":
-      cost += 18;
-      break;
-    default:
-      break;
-  }
       this.toppings.sauce.forEach(function(sauce) {
         cost += sauce.price;
       });
@@ -80,15 +72,15 @@ let pizzaToppings = {
 const pizzaForm = document.getElementById("pizza-form");
 pizzaForm.addEventListener("submit", function(event) {
   event.preventDefault();
-  const name = document.getElementById("name-input").value;
+  const name = document.getElementById("guest-name").value;
   const size = document.querySelector('input[name="size"];checked').value;
   const sauce = document.querySelector('input[name="sauce"];checked').value;
   const meat = document.querySelector('input[name="meat"];checked').value;
   const veggies = document.querySelector('input[name="veggies"];checked').value;
   const cheese = document.querySelector('input[name="cheese"];checked').value;
 
-  const pizza = new Pizza(name, toppings, size);
-  const totalCost = pizza.calcCost();
+  const pizza = new Pizza(name, pizzaToppings, size);
+  const cost = pizza.calcCost();
 
-  console.log(`Order for ${name}!`);
+  console.log(`Order for ${name}! with a ${size} pizza for $${cost}`);
 });  

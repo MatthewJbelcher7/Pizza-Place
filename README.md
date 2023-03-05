@@ -36,7 +36,6 @@ The prompt’s required functionality and baseline project requirements are in p
 ## Known Bugs
 
 * Not fully fleshed out
-* No current UI or HTMl
 
 ## License
 
